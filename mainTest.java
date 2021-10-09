@@ -8,9 +8,9 @@ public class mainTest {
         String color;
 
         System.out.println("모델명 : ");
-        modelName = sc.next();
+        modelName = sc.nextLine();
         System.out.println("색상 : ");
-        color = sc.next();
+        color = sc.nextLine();
         System.out.println("저는 " + modelName + " 핸드폰을 사고 싶고, " + color + " 색상을 사고 싶어요!");
     }
 
