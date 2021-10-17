@@ -1,64 +1,38 @@
-package first;
+package second;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class mainTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        SmartPhone smartphone1 = new SmartPhone("Galaxy s21", "Android", 2021, 4100, "C");
-        SmartPhone smartphone2 = new SmartPhone("Iphone XS", "IOS", 2018, 2658, "8pin");
-        SmartPhone smartphone3 = new SmartPhone("V50 ThinQ", "Android", 2019, 4000, "C");
+        SmartPhone smartPhone1 = new SmartPhone("Galaxy s21", "Android", 2021, 4100, "C");
+        FolderPhone folderPhone1 = new FolderPhone("Corby F", 2010, true);
 
         System.out.println("안녕하세요. 인하 핸드폰 매장입니다.\n" +
-                "핸드폰을 선택해주세요.\n" +
-                "1. Galaxy s21 / 2. Iphone XS / 3. ThinQ");
+                "핸드폰을 선택해주세요\n" +
+                "1. Galaxy s21 / 2. Corby F");
         switch (sc.nextInt()) {
             case 1 :
-                smartphone1.printInfo();
+                smartPhone1.printInfo();
+                smartPhone1.call("오일남", "영상통화");
+                smartPhone1.sendMessage("오일남", "우린 깐부잖아");
+                smartPhone1.launchCamera("파노라마");
+                smartPhone1.exitCamera();
+                smartPhone1.notEnoughBattery();
+                smartPhone1.update();
                 break;
             case 2 :
-                smartphone2.printInfo();
-                break;
-            case 3 :
-                smartphone3.printInfo();
+                folderPhone1.printInfo();
+                folderPhone1.call("오일남", "영상통화");
+                folderPhone1.sendMessage("오일남", "우린 깐부잖아");
+                folderPhone1.launchCamera("파노라마");
+                folderPhone1.exitCamera();
+                folderPhone1.notEnoughBattery();
+                folderPhone1.folder();
                 break;
             default:
                 System.out.println("잘못된 번호입니다.");
         }
-
-
     }
 }
-
-
-
-//import java.util.Scanner;
-//
-//public class mainTest {
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        String modelName;
-//        String color;
-//
-//        System.out.println("모델명 : ");
-//        modelName = sc.nextLine();
-//        System.out.println("색상 : ");
-//        color = sc.nextLine();
-//        System.out.println("저는 " + modelName + " 핸드폰을 사고 싶고, " + color + " 색상을 사고 싶어요!");
-//    }
-//
-//}
-
-
-//version 0.1
-//public class mainTest {
-//    public static void main(String[] args) {
-//        String modelName;
-//        String color;
-//
-//                modelName = "Galaxy Z Fold 3";
-//                color = "Lavender";
-//            System.out.println("저는 " + modelName + " 핸드폰을 사고 싶고, " + color + " 색상을 가지고 싶어요!");
-//            }
-//
-//        }
